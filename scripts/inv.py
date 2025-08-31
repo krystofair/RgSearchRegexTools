@@ -3,7 +3,7 @@
 import sys
 
 # function or method invoke
-PATTERN = r'^[^def|class]\s*(\w+\.)*{func}\('
+PATTERN = r'\s*(\w+\.)*{func}\('
 
 def format(funcname=r"\w+"):
     return PATTERN.format(func=funcname)
