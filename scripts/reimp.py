@@ -2,7 +2,9 @@
 
 import sys
 
-PATTERN = r'(?:from\s+\.*({module})(\.\w+)?\s+import\s+({func})|import\s+{module}\.?{func})'
+
+PATTERN = (r'(?:from\s+[\.\w]*{module}(\.\w+)*\s+import\s+({func})'
+           r'|import\s+{module}\.?{func})')
 
 def format(modname=r"[\w\.]+", funcname=r"\w*"):
     return PATTERN.format(module=modname, func=funcname)
